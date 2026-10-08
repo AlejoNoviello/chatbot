@@ -1,0 +1,18 @@
+[project]
+name = "chatbot"
+version = "0.1.0"
+description = "Chatbot agente de IA con Claude y herramientas"
+requires-python = ">=3.10"
+dependencies = ["anthropic>=1.12,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+chatbot = "chatbot.cli:main"
+
+[tool.setuptools]
+packages = ["chatbot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
